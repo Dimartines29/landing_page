@@ -31,7 +31,7 @@ body {
 }
 
 .hero {
-    background: linear-gradient(rgba(11, 12, 16, 0.9), rgba(31, 40, 51, 0.9)), url('img.jpg');
+    background: linear-gradient(rgba(84, 89, 114, 0.9), rgba(0, 0, 0, 0.9)), url('img.jpg');
     background-size: cover;
     background-position: center;
     color: var(--text-light);
@@ -50,9 +50,8 @@ nav {
 }
 
 .logo {
-    font-size: 1.5rem;
-    font-weight: bold;
-    color: var(--secondary);
+    width: 150px;
+    height: 150px;
 }
 
 .hero-content {
@@ -152,7 +151,7 @@ section {
     display: flex;
     align-items: center;
     gap: 2rem;
-    max-width: 800px;
+    max-width: 1000px;
     margin: 0 auto;
     background: var(--primary);
     padding: 2rem;
@@ -166,6 +165,14 @@ section {
     border-radius: 50%;
     object-fit: cover;
     border: 3px solid var(--secondary);
+}
+
+.autor-info {
+    width: 80%;
+}
+
+.autor-info p {
+    font-size: 20px;
 }
 
 .preco-card {
@@ -186,11 +193,11 @@ section {
 .preco-original {
     text-decoration: line-through;
     color: var(--text-light);
-    font-size: 1.5rem;
+    font-size: 20px;
 }
 
 .preco-atual {
-    font-size: 3rem;
+    font-size: 30px;
     font-weight: bold;
     color: var(--secondary);
     margin-left: 1rem;
