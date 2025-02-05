@@ -1,0 +1,294 @@
+:root {
+    /* Cores principais */
+    --primary-dark: #0B0C10;      /* Azul muito escuro, quase preto - para fundos */
+    --primary: #1F2833;           /* Azul escuro - para seções */
+    --secondary: #66FCF1;         /* Azul neon/ciano - para destaques e CTAs */
+    --secondary-dark: #45A29E;    /* Azul neon escuro - para hovers */
+    --text-light: #C5C6C7;        /* Cinza claro - para texto sobre fundo escuro */
+    --text-dark: #1F2833;         /* Azul escuro - para texto sobre fundo claro */
+    --accent: #4F9BFF;            /* Azul brilhante - para elementos importantes */
+    --gradient-start: #0B0C10;    /* Para gradientes */
+    --gradient-end: #1F2833;      /* Para gradientes */
+
+    --preto: #000000;
+    --azul-escuro: #14213d;
+    --laranja: #fca311;
+    --cinza-claro: #e5e5e5;
+    --branco: #ffffff;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    color: var(--text-light);
+    background-color: var(--primary-dark);
+}
+
+.hero {
+    background: linear-gradient(rgba(11, 12, 16, 0.9), rgba(31, 40, 51, 0.9)), url('img.jpg');
+    background-size: cover;
+    background-position: center;
+    color: var(--text-light);
+    padding: 2rem;
+    text-align: center;
+    min-height: 80vh;
+    display: flex;
+    flex-direction: column;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 0;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--secondary);
+}
+
+.hero-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+}
+
+h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    color: var(--secondary);
+    text-shadow: 0 0 10px rgba(102, 252, 241, 0.3);
+}
+
+h2 {
+    color: var(--secondary);
+    margin-bottom: 2rem;
+}
+
+.subtitle {
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+    color: var(--text-light);
+}
+
+.cta-button {
+    background-color: var(--secondary);
+    color: var(--primary-dark);
+    padding: 1rem 2rem;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: all 0.3s;
+    border: 2px solid var(--secondary);
+}
+
+.cta-button:hover {
+    background-color: transparent;
+    color: var(--secondary);
+    box-shadow: 0 0 15px rgba(102, 252, 241, 0.5);
+}
+
+.pulse {
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+        box-shadow: 0 0 0 0 rgba(102, 252, 241, 0.4);
+    }
+    50% {
+        transform: scale(1.05);
+        box-shadow: 0 0 0 10px rgba(102, 252, 241, 0);
+    }
+    100% {
+        transform: scale(1);
+        box-shadow: 0 0 0 0 rgba(102, 252, 241, 0);
+    }
+}
+
+section {
+    padding: 4rem 2rem;
+}
+
+.beneficios-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.beneficio {
+    text-align: center;
+    padding: 2rem;
+    background-color: var(--primary);
+    border-radius: 10px;
+    transition: transform 0.3s;
+    border: 1px solid var(--secondary-dark);
+}
+
+.beneficio:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 0 20px rgba(102, 252, 241, 0.2);
+}
+
+.beneficio h3 {
+    color: var(--secondary);
+    margin-bottom: 1rem;
+}
+
+.autor-content {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    max-width: 800px;
+    margin: 0 auto;
+    background: var(--primary);
+    padding: 2rem;
+    border-radius: 10px;
+    border: 1px solid var(--secondary-dark);
+}
+
+.autor-foto {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid var(--secondary);
+}
+
+.preco-card {
+    max-width: 500px;
+    margin: 0 auto;
+    text-align: center;
+    padding: 2rem;
+    background-color: var(--primary);
+    box-shadow: 0 0 20px rgba(102, 252, 241, 0.1);
+    border-radius: 10px;
+    border: 1px solid var(--secondary-dark);
+}
+
+.preco-valor {
+    margin: 2rem 0;
+}
+
+.preco-original {
+    text-decoration: line-through;
+    color: var(--text-light);
+    font-size: 1.5rem;
+}
+
+.preco-atual {
+    font-size: 3rem;
+    font-weight: bold;
+    color: var(--secondary);
+    margin-left: 1rem;
+    text-shadow: 0 0 10px rgba(102, 252, 241, 0.3);
+}
+
+.preco-beneficios {
+    list-style: none;
+    margin: 2rem 0;
+}
+
+.preco-beneficios li {
+    margin: 1rem 0;
+    color: var(--text-light);
+}
+
+.preco-beneficios li::before {
+    content: "✓";
+    color: var(--secondary);
+    margin-right: 0.5rem;
+}
+
+.garantia {
+    margin-top: 1rem;
+    font-size: 0.9rem;
+    color: var(--text-light);
+}
+
+footer {
+    text-align: center;
+    padding: 2rem;
+    background-color: var(--primary);
+    color: var(--text-light);
+    border-top: 1px solid var(--secondary-dark);
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(11, 12, 16, 0.8);
+}
+
+.modal-content {
+    background-color: var(--primary);
+    padding: 2rem;
+    border-radius: 10px;
+    max-width: 500px;
+    margin: 15% auto;
+    position: relative;
+    text-align: center;
+    border: 1px solid var(--secondary);
+    box-shadow: 0 0 30px rgba(102, 252, 241, 0.2);
+}
+
+.close {
+    position: absolute;
+    right: 1rem;
+    top: 0.5rem;
+    font-size: 2rem;
+    cursor: pointer;
+    color: var(--secondary);
+}
+
+.close:hover {
+    color: var(--secondary-dark);
+}
+
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2rem;
+    }
+
+    .autor-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .preco-card {
+        margin: 0 1rem;
+    }
+}
+
+/* Adicionando classe de animação fade-in */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.fade-in {
+    animation: fadeIn 0.5s ease-out forwards;
+}
