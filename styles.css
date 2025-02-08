@@ -31,11 +31,11 @@ body {
 }
 
 .hero {
-    background: linear-gradient(rgba(84, 89, 114, 0.9), rgba(0, 0, 0, 0.9)), url('img.jpg');
+    background: linear-gradient(rgba(84, 89, 114, 0.9), #0B0C10), url('img.jpg');
     background-size: cover;
     background-position: center;
     color: var(--text-light);
-    padding: 2rem;
+    padding: 10px;
     text-align: center;
     min-height: 80vh;
     display: flex;
@@ -50,8 +50,8 @@ nav {
 }
 
 .logo {
-    width: 150px;
-    height: 150px;
+    width: 100px;
+    height: 100px;
 }
 
 .hero-content {
