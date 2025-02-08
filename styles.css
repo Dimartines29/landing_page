@@ -151,10 +151,10 @@ section {
     display: flex;
     align-items: center;
     gap: 2rem;
-    max-width: 1000px;
+    max-width: 100%;
     margin: 0 auto;
     background: var(--primary);
-    padding: 2rem;
+    padding: 15px;
     border-radius: 10px;
     border: 1px solid var(--secondary-dark);
 }
@@ -168,11 +168,11 @@ section {
 }
 
 .autor-info {
-    width: 80%;
+    width: 100%;
 }
 
 .autor-info p {
-    font-size: 20px;
+    font-size: 17px;
 }
 
 .preco-card {
