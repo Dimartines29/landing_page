@@ -49,11 +49,6 @@ nav {
     padding: 1rem 0;
 }
 
-.logo {
-    width: 100px;
-    height: 100px;
-}
-
 .hero-content {
     flex: 1;
     display: flex;
